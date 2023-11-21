@@ -1,0 +1,75 @@
+<style>
+  *{
+    font-family: 'Courier New', Courier, monospace;
+  }
+  h1{
+    color: blanchedalmond;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: grey;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  hr{
+    margin-top: 20px;
+  }
+  div{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  a{
+    background-color: blanchedalmond;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+  }
+  div {
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .central{
+    height: 500px;
+    overflow: hidden;
+  }
+
+  .contenido {
+    display: block;
+    height: 500px;
+  }
+
+</style>
+<div>
+  <h1>{{ title }}</h1>
+  <nav>
+    <a href="#contador">Contador</a>
+    <a href="#heroe">Heroe</a>
+    <a href="#centros-educativos">Centros Educativos</a>
+    <a href="#lista">Lista</a>
+  </nav>
+  <hr>
+  <div class="central">
+    <div id="contador" class="contenido">
+      <app-contador></app-contador>
+    </div>
+
+    <div id="heroe" class="contenido">
+      <app-heroes-heroe></app-heroes-heroe>
+    </div>
+
+    <div id="lista" class="contenido">
+      <app-heroes-lista></app-heroes-lista>
+    </div>
+
+    <div id="centros-educativos" class="contenido">
+      <app-instituto></app-instituto>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,64 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-heroes-lista',
+  templateUrl: './lista.component.html',
+  styleUrls: ['./lista.component.css']
+})
+export class ListaComponent {
+  private listaCentros:Instituto[]=[{nombre:"IES Playamar",img:"https://iesplayamar.es/wp-content/uploads/2021/09/logo-ies-playamar.png"},{nombre:"IES Jaranda",img:"https://www.juntadeandalucia.es/averroes/centros-tic/41700853/helvia/sitio/upload/img/logo_jaca2.jpg"}];
+  private pilaCentros:Instituto[]=[{nombre:"IES Almadraba",img:"data:image/png;base64,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"}];
+  private posicion:number=0;
+
+  anadirCentroPila(){
+    const centroAnadir=this.pilaCentros.pop()
+    if(centroAnadir!=undefined){
+      this.listaCentros.splice(this.posicion,0,centroAnadir);
+    }
+  }
+
+  eliminarInstituto(){
+    this.pilaCentros.push(this.listaCentros[this.posicion]);
+    this.listaCentros.splice(this.posicion,1)
+    if(this.posicion>0){
+      this.posicion-=1
+    }
+  }
+
+  getListaInstituto():Instituto{
+    if(this.getTamanioLista()>0){
+    return this.listaCentros[this.posicion];
+    }else{
+      return {nombre:"",img:""}
+    }
+  }
+
+  getPosicion():number{
+    if(this.getTamanioLista()==0){
+      return 0
+    }else{
+      return this.posicion+1
+    }
+  }
+
+  getTamanioLista():number{
+    return this.listaCentros.length
+  }
+
+  getTamanioPila():number{
+    return this.pilaCentros.length
+  }
+
+  posterior(){
+    this.posicion+=1
+  }
+
+  anterior(){
+    this.posicion-=1
+  }
+}
+
+interface Instituto{
+  nombre:string,
+  img:string
+}

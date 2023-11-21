@@ -1,0 +1,31 @@
+<style>
+  #botones{
+    display: inline-block;
+    margin-left: 20px;
+    width: 120px;
+  }
+  #pos{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  h1, #listado{
+    text-align: center;
+  }
+  img{
+    width: 200px;
+
+  }
+</style>
+<h1>Lista Centros</h1>
+<div id="listado">
+  <p>{{getListaInstituto().nombre}}</p>
+  <p><img src="{{getListaInstituto().img}}"></p>
+</div>
+<div style="text-align: center; margin-top: 80px;">
+  <div id="botones"><button class="btn btn-outline-secondary" *ngIf="getPosicion()>1" (click)="anterior()">Anterior</button></div>
+  <div id="botones"><button class="btn btn-outline-danger" *ngIf="getTamanioLista()!=0" (click)="eliminarInstituto()">Eliminar</button></div>
+  <div id="botones"><p id="pos">Posicion: {{getPosicion()}}</p></div>
+  <div id="botones"><button class="btn btn-outline-success" *ngIf="getTamanioPila()!=0" (click)="anadirCentroPila()">Insertar</button></div>
+  <div id="botones"><button class="btn btn-outline-secondary" *ngIf="getPosicion()<getTamanioLista()" (click)="posterior()">Posterior</button></div>
+</div>
