@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { ContadorComponent } from './contador/contador.component';
 import { InstitutoComponent } from './institutos/instituto.component';
 import { HeroesModule } from './heroes/components/heroes.module';
+import { DbzModule } from './dbz/dbz.module';
 
 
 
@@ -13,7 +14,8 @@ import { HeroesModule } from './heroes/components/heroes.module';
   ],
   imports: [
     BrowserModule,
-    HeroesModule
+    HeroesModule,
+    DbzModule
   ],
   providers: [],
   bootstrap: [AppComponent]
