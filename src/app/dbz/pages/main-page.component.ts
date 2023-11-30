@@ -19,4 +19,10 @@ export class MainPageComponent{
       fuerza: 7000
     }
   ]
+  onNewPersonaje(personaje:Personaje){
+    this.personajes.push(personaje)
+  }
+  onDeletePersonaje(index:number){
+    this.personajes.splice(index,1)
+  }
 }

@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component,Input,EventEmitter, Output } from '@angular/core';
 import { Personaje } from '../../interfaces/personajes.interfaces';
 
 @Component({
@@ -8,4 +8,11 @@ import { Personaje } from '../../interfaces/personajes.interfaces';
 export class ListaDBZComponent {
   @Input()
   public listaPersonajes: Personaje[] = []
+
+  @Output()
+  public onDeletePersonaje: EventEmitter<number> = new EventEmitter()
+
+  deletePersonaje(index:number){
+    this.onDeletePersonaje.emit(index)
+  }
 }
