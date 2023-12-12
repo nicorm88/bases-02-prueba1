@@ -1,0 +1,30 @@
+<h1>Construye tu heroe</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>{{getNombre()}}</dd>
+
+  <td>Edad:</td>
+  <dd>{{getEdad()}}</dd>
+
+  <td>Método:</td>
+  <dd>Algún método</dd>
+
+  <td>Capitalizado:</td>
+  <dd>{{nombreCapitalizado()}}</dd>
+</dl>
+<div>
+  <input #nombre type="text" placeholder="Introduzca el nombre del Heroe">
+  <button type="button" class="btn btn-outline-secondary" (click)="setNombre(nombre.value)">
+    Cambiar nombre
+  </button>
+</div>
+<div>
+  <input #edad type="number" placeholder="Introduzca la edad ">
+  <button type="button" class="btn btn-outline-secondary" (click)="setEdad(edad.value)">
+    Cambiar edad
+  </button>
+</div>
+<button *ngIf="getNombre()!==''" type="button" class="btn btn-warning" (click)="restablecer()">
+  Restablecer
+</button>

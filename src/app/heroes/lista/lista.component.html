@@ -1,0 +1,20 @@
+
+<h1>Centros Educativos</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>{{getNombreInstituto()}}</dd>
+
+  <td>Localidad:</td>
+  <dd>{{getLocalidad()}}</dd>
+
+  <td>Familias Profesionales:</td>
+  <dd>{{getFamiliasProfesionales()}}</dd>
+
+  <td>CENTRO:</td>
+  <dd>{{getNombreInstituto()}}</dd>
+  <img src="{{getRutaLogo()}}" width="10%">
+</dl>
+<button type="button" class="btn btn-secondary" (click)="presionBotonCambiarCentro()">
+  Cambiar centro
+</button>

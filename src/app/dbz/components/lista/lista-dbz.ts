@@ -10,9 +10,9 @@ export class ListaDBZComponent {
   public listaPersonajes: Personaje[] = []
 
   @Output()
-  public onDeletePersonaje: EventEmitter<number> = new EventEmitter()
+  public onDeletePersonajeById: EventEmitter<string> = new EventEmitter()
 
-  deletePersonaje(index:number){
-    this.onDeletePersonaje.emit(index)
+  deletePersonaje(id:string){
+    this.onDeletePersonajeById.emit(id)
   }
 }

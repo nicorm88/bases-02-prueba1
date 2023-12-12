@@ -11,13 +11,14 @@ export class AddDBZComponent {
   public onNewPersonaje: EventEmitter<Personaje> = new EventEmitter()
 
   public personaje:Personaje={
+    id:"",
     nombre:"",
     fuerza:null
   }
   addPersonaje(){
-    if(this.personaje.nombre.length>0){
+    if(this.personaje.nombre.length>0 && this.personaje.id!=null && this.personaje.fuerza!=null){
       this.onNewPersonaje.emit(this.personaje)
+      this.personaje={id:"",nombre:"",fuerza:null}
     }
-    this.personaje={nombre:"",fuerza:null}
   }
 }

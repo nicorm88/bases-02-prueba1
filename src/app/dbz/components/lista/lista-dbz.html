@@ -12,10 +12,9 @@
   <div class="contenido">
     <ul class="list-group">
       <li
-      *ngFor="let personaje of listaPersonajes; let i=index; let esPar=odd; let esUltimo=last; let esPrimero=first"
-      class="list-group-item"
-      [ngClass]="{'list-group-item-primary':esPrimero,'list-group-item-secondary':esPar,'list-group-item-danger':esUltimo}">
-        {{personaje.nombre}} ({{i+1}})- FUERZA: {{personaje.fuerza}} - Es par: {{esPar}} - Es el ultimo: {{esUltimo}}  <button style="width: 70px;height: 25px;font-size: 10px;" class="btn btn-danger" (click)="deletePersonaje(i)">Eliminar</button>
+      *ngFor="let personaje of listaPersonajes"
+      class="list-group-item">
+        {{personaje.nombre}} ({{personaje.id}})- FUERZA: {{personaje.fuerza}} <button style="width: 70px;height: 25px;font-size: 10px;" class="btn btn-danger" (click)="deletePersonaje(personaje.id)">Eliminar</button>
       </li>
     </ul>
   </div>
